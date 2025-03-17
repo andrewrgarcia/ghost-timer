@@ -8,7 +8,7 @@ OBJ_DIR = obj
 BIN_DIR = bin
 
 # Target executable
-TARGET = $(BIN_DIR)/countdown
+TARGET = $(BIN_DIR)/ghost-timer
 
 # Source files
 SOURCES = $(SRC_DIR)/main.c $(SRC_DIR)/timer.c
@@ -48,7 +48,7 @@ install: $(TARGET)
 
 # Uninstall target
 uninstall:
-	rm -f /usr/local/bin/countdown
+	rm -f /usr/local/bin/ghost-timer
 
 # Dependencies
 $(OBJ_DIR)/main.o: $(SRC_DIR)/main.c $(SRC_DIR)/timer.h
