@@ -4,10 +4,12 @@
 ## Overview  
 GhostTimer is a **C-based countdown timer** that displays a **non-intrusive on-screen timer** using `osd_cat`. It updates smoothly **without flickering** and changes colors as time runs out:
 
-- 🟢 **White** → Default  
-- 🟠 **Orange** → 25% time remaining  
-- 🔴 **Red** → 10% time remaining  
+- 🔵 **Cyan** → More than 50% time remaining  
+- ⚪ **White** → Between 50% and 25% remaining  
+- 🟠 **Orange** → Less than 25% remaining  
+- 🔴 **Red** → Less than 10% remaining  
 - ⏳ **"Time's Up!"** → Displays in red, then disappears  
+
 
 ## Installation  
 ### **1️⃣ Install Dependencies**  

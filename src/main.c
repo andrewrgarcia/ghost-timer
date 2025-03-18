@@ -9,13 +9,12 @@ void cleanup(int signum) {
     exit(0);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int hours, minutes, seconds, total_seconds;
     
-    // Set up signal handler for Ctrl+C
-    signal(SIGINT, cleanup);
+    signal(SIGINT, handle_sigint);
     
-    if (!get_user_input(&hours, &minutes, &seconds)) {
+    if (!get_user_input(argc, argv, &hours, &minutes, &seconds)) {
         fprintf(stderr, "Invalid input\n");
         return 1;
     }
@@ -29,7 +28,6 @@ int main() {
     
     start_countdown(total_seconds);
     
-    // Clean up
     system("pkill -f \"osd_cat\" 2>/dev/null");
     
     return 0;
